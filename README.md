@@ -12,7 +12,8 @@ For the active geo replication demo, we will:
 
 The reference architecture looks something like this:
 
-![active-active_demo drawio](https://user-images.githubusercontent.com/26322220/143983665-19d3bcd9-dc9d-4702-becc-0b705a3ad9d9.png)
+![active-active_demo drawio](https://user-images.githubusercontent.com/26322220/144104403-a4b1cc7f-9bcb-4a5c-aebb-311240a5105f.png)
+
 
 **Procedure**
 1. **Deployment of Redis Enterprise clusters with active geo-replication**: Create ACRE cluster with SKU E100, capacity can be anything. For this demo I have chosen 10. Deploy one cluster in East US region and other deploy it in Central US region. You may either do it from Azure Portal or do it using Azure Cli or Terraform. Terraform link is provided here https://github.com/bestarch/re-aa
