@@ -24,7 +24,7 @@ The reference architecture looks something like this:
 
 4. Next we will deploy the Python and Flask app to each of these regions. The idea is, each app should be connected to the cluster located at their respective regions. Refer the architecture diagram above.
 
-5. For deploying our app, we will first spin-up two VMs in each of the regions and install the needed softwares to run our apps. Following are the steps needed for this:
+5. **Application Deployment**: For deploying our app, we will first spin-up two VMs in each of the regions and install the needed softwares to run our apps. Following are the steps needed for this:
 
     a. Create a VM with following details:
         OS: Ubuntu 18.04 
@@ -55,7 +55,9 @@ The reference architecture looks something like this:
 
     c.  Repeat the above steps for another region "South India"
 
-6. Now we have deployed the active-active cluster along with the 2 VMs in each region. Let's test this.
+6. Now we have deployed the active-active cluster along with the 2 VMs in each region. The deployment looks something like this:
+![image](https://user-images.githubusercontent.com/26322220/144066272-4628370d-ba1d-4567-a1be-ceb1436e547f.png)
+Let's test this.
 
 7. Open the browser and enter http://<PUBLIC_IP_OF_CENTRAL_INDIA_REGION>:5000
 
