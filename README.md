@@ -15,8 +15,10 @@ The reference architecture looks something like this:
 
 
 **Procedure**
-1. Create ACRE cluster with SKU E100, capacity can be anything. For this demo I have chosen 10. Deploy one cluster in East US region and other deploy it in Central US region. You may either do it from Azure Portal or do it using Azure Cli or Terraform. Terraform link is provided here https://github.com/bestarch/re-aa
+1. **Deployment of Redis Enterprise clusters with active geo-replication**: Create ACRE cluster with SKU E100, capacity can be anything. For this demo I have chosen 10. Deploy one cluster in East US region and other deploy it in Central US region. You may either do it from Azure Portal or do it using Azure Cli or Terraform. Terraform link is provided here https://github.com/bestarch/re-aa
 ![image](https://user-images.githubusercontent.com/26322220/143982955-381f77b0-33db-4eb1-93df-8819192d7ae2.png)
+Once complete, it looks something like this:
+
 
 2. Test these clusters from your local environment so as to be sure everything is working as expected. You may use open source redis-cli or RedisInsight (Data visualization and monitoring tool from Redis(Company))
 
@@ -60,6 +62,13 @@ The reference architecture looks something like this:
 Let's test this.
 
 7. Open the browser and enter http://<PUBLIC_IP_OF_EAST_US_REGION>:5000
+![image](https://user-images.githubusercontent.com/26322220/144080885-13372fa1-353a-42ca-9587-7f40eafc5843.png)
+
+![image](https://user-images.githubusercontent.com/26322220/144081701-9dc03936-1343-4715-acb5-e6746b07dc0a.png)
+
+8. **Testing**: Open http://<PUBLIC_IP_OF_EAST_US_REGION>:5000, enter the details of the new user. 
+Now visit  http://<PUBLIC_IP_OF_CENTRAL_US_REGION>:5000, and check all the registered users.
+You should see the user added in East US region. We can test this vice-versa as well by adding new user from central region.
 
 
 
