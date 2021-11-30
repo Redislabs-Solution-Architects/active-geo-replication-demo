@@ -1,5 +1,5 @@
 # Active Geo-replication demo
-Active Geo-replication using User Profile applications deployed in two different region each pointing to their respective ACRE clusters.
+Active Geo-replication using User Profile application deployed in two different regions each pointing to their respective ACRE clusters.
 
 
 **Introduction**
