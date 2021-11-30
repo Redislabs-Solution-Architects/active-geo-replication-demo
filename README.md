@@ -1,5 +1,5 @@
 # Active Geo-replication demo
-Active Geo-replication using ACRE and Python apps
+Active Geo-replication using User Profile applications deployed in two different region each pointing to their respective ACRE clusters.
 
 
 **Introduction**
