@@ -5,8 +5,8 @@ Active Geo-replication using User Profile application deployed in two different 
 **Introduction**
 
 For the active geo replication demo, we will:
-Deploy 2 ACRE clusters one each in East US and Central US, https://github.com/bestarch/re-aa
-Deploy a sample user profile application built on Python, Flask, Bootstrap on VMs in each of these regions. https://github.com/bestarch/user-profile/tree/main
+* Deploy 2 ACRE clusters one each in East US and Central US. For this demo, I have used these Terraform scripts: https://github.com/bestarch/re-aa
+* Deploy a sample user profile application built on Python, Flask, Bootstrap on VMs in each of these regions. The application is present here: https://github.com/bestarch/user-profile
 
 **Reference architecture**
 The reference architecture looks something like this:
@@ -53,7 +53,7 @@ Once complete, it looks something like this:
         export FLASK_APP=server.py
         export URL=<URL> # From step 3 above
         export PORT=<PORT> # From step 3 above
-        export PASSWORD=<Password> # From step 3 above
+        export PASSWORD=<PASSWORD> # From step 3 above
         flask run -h 0.0.0.0
 
     c.  Repeat the above steps for another region "Central US"
