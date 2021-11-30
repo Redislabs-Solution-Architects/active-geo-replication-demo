@@ -33,6 +33,7 @@ The reference architecture looks something like this:
         Make everything else as default
         Note down the Public IP 
     b. Once the VM is up SSH into the terminal and execute these scripts:
+
         sudo apt-get update
         sudo apt-get -y install python3 python3-dev
         sudo apt install python3-pip
@@ -49,6 +50,7 @@ The reference architecture looks something like this:
         export PORT=<PORT> # From step 3 above
         export PASSWORD=<Password> # From step 3 above
         flask run -h 0.0.0.0
+
     c.  Repeat the above steps for another region "South India"
 
 6. Now we have deployed the active-active cluster along with the 2 VMs in each region. Let's test this.
