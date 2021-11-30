@@ -5,7 +5,7 @@ Active Geo-replication using ACRE and Python apps
 **Introduction**
 
 For the active geo replication demo, we will:
-Deploy 2 ACRE clusters one each in Central India and South India, https://github.com/bestarch/re-aa
+Deploy 2 ACRE clusters one each in East US and Central US, https://github.com/bestarch/re-aa
 Deploy a sample user profile application built on Python, Flask, Bootstrap on VMs in each of these regions. https://github.com/bestarch/user-profile/tree/main
 
 **Reference architecture**
@@ -15,7 +15,7 @@ The reference architecture looks something like this:
 
 
 **Procedure**
-1. Create ACRE cluster with SKU E100, capacity can be anything. For this demo I have chosen 10. Deploy one cluster in Central India region and other deploy it in South India region. You may either do it from Azure Portal or do it using Azure Cli or Terraform. Terraform link is provided here https://github.com/bestarch/re-aa
+1. Create ACRE cluster with SKU E100, capacity can be anything. For this demo I have chosen 10. Deploy one cluster in East US region and other deploy it in Central US region. You may either do it from Azure Portal or do it using Azure Cli or Terraform. Terraform link is provided here https://github.com/bestarch/re-aa
 ![image](https://user-images.githubusercontent.com/26322220/143982955-381f77b0-33db-4eb1-93df-8819192d7ae2.png)
 
 2. Test these clusters from your local environment so as to be sure everything is working as expected. You may use open source redis-cli or RedisInsight (Data visualization and monitoring tool from Redis(Company))
@@ -28,7 +28,7 @@ The reference architecture looks something like this:
 
     a. Create a VM with following details:
         OS: Ubuntu 18.04 
-        Region: Central India
+        Region: East US
         Size: Standard D2s v3 (2 vcpus, 8 GiB memory)
         In the networking section, allow these ports: 22, 80,443, 5000 (custom port for Flask application)
         Enable public IP access
@@ -53,13 +53,13 @@ The reference architecture looks something like this:
         export PASSWORD=<Password> # From step 3 above
         flask run -h 0.0.0.0
 
-    c.  Repeat the above steps for another region "South India"
+    c.  Repeat the above steps for another region "Central US"
 
 6. Now we have deployed the active-active cluster along with the 2 VMs in each region. The deployment looks something like this:
 ![image](https://user-images.githubusercontent.com/26322220/144066272-4628370d-ba1d-4567-a1be-ceb1436e547f.png)
 Let's test this.
 
-7. Open the browser and enter http://<PUBLIC_IP_OF_CENTRAL_INDIA_REGION>:5000
+7. Open the browser and enter http://<PUBLIC_IP_OF_EAST_US_REGION>:5000
 
 
 
