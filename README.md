@@ -58,7 +58,8 @@ Once complete, it looks something like this:
         flask run -h 0.0.0.0
 
     c.  Repeat the above steps for another region "Central US"
-
+    For further reading on how to deploy python apps on Azure, please refer this link: https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2102
+    
 6. Now we have deployed the active-active cluster along with the 2 VMs in each region. The deployment looks something like this:
 ![image](https://user-images.githubusercontent.com/26322220/144066272-4628370d-ba1d-4567-a1be-ceb1436e547f.png)
 Let's test this.
