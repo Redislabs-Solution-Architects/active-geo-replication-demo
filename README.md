@@ -15,7 +15,8 @@ For the active geo replication demo, we will:
 
 The reference architecture looks something like this:
 
-![active-active_demo drawio](https://user-images.githubusercontent.com/26322220/144104403-a4b1cc7f-9bcb-4a5c-aebb-311240a5105f.png)
+![A-A_ACRE_Demo drawio](https://user-images.githubusercontent.com/26322220/157703508-4d68d13a-bd40-4019-93a8-ad9900d621ad.png)
+
 
 
 **Procedure**
