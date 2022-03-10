@@ -24,7 +24,7 @@ Create ACRE cluster with SKU E100, capacity can be anything. For this demo I hav
 Deploy one cluster in Central India region and other in Southeast Asia region. You can achieve this either from Azure Portal, Azure Cli or Terraform scripts. Terraform link is provided here https://github.com/bestarch/re-aa
 ![image](https://user-images.githubusercontent.com/26322220/143982955-381f77b0-33db-4eb1-93df-8819192d7ae2.png)
 Once complete, it looks something like this:
-![image](https://user-images.githubusercontent.com/26322220/144082884-6ebeb6fa-8d9b-4470-ae68-56a41a09579e.png)
+![image](https://user-images.githubusercontent.com/26322220/157701062-7143bcba-5013-42fb-8fe3-87c06eeba2e0.png)
 
 
 2. Test these clusters from your local environment so as to be sure everything is working as expected. You may use open source redis-cli or RedisInsight (Data visualization and monitoring tool from Redis
