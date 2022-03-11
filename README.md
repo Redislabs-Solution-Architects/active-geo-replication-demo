@@ -42,7 +42,7 @@ Following are the steps needed for this:
     
         OS: Ubuntu 18.04 
         Region: Central India
-        Size: Standard D2s v3 (2 vcpus, 8 GiB memory)
+        Size: Standard E2s v3 (2 vcpus, 16 GiB memory) 
         In the networking section, allow these ports: 22, 80,443, 5000 (custom port for Flask application)
         Enable public IP access
         Make everything else as default
@@ -61,13 +61,17 @@ Following are the steps needed for this:
         sudo apt install python3-flask
         sudo apt install python3-pip
         pip3 install -r requirements.txt
+        
+    c. Start the server
+    
+        cd user-profile
         export FLASK_APP=server.py
         export URL=<URL> # From step 3 above
         export PORT=<PORT> # From step 3 above
         export PASSWORD=<PASSWORD> # From step 3 above
         flask run -h 0.0.0.0
 
-    c.  Repeat the above steps for another region "Southeast Asia"
+    d.  Repeat the above steps for another region "Southeast Asia"
     
     
     For further reading on how to deploy python apps on Azure, please refer this link: https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2102
