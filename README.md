@@ -5,7 +5,7 @@ The regions used here are:
 2. Southeast Asia (Singapore)
 
 
-**Introduction**
+**Introduction** <br>
 
 For the active geo replication demo, we will:
 * Deploy 2 ACRE clusters one each in Central India and Southeast Asia. For this demo, I have used these Terraform scripts: https://github.com/bestarch/re-aa
@@ -19,7 +19,7 @@ The reference architecture looks something like this:
 
 
 
-**Procedure**
+**Procedure** <br>
 1. **Deployment of Redis Enterprise clusters with active geo-replication**: <br>
 Create ACRE cluster with SKU E10, capacity can be anything. For this demo I have chosen 2. <br>
 Deploy one cluster in Central India region and other in Southeast Asia region. You can achieve this either from Azure Portal, Azure Cli or Terraform scripts.<br> Terraform link is provided here https://github.com/bestarch/re-aa <br>
@@ -90,12 +90,12 @@ Let's test this.
 
 ![image](https://user-images.githubusercontent.com/26322220/144081701-9dc03936-1343-4715-acb5-e6746b07dc0a.png)
 
-8. **Testing**
+8. **Testing** <br>
     Open http://<PUBLIC_IP_OF_CENTRAL_INDIA_REGION>:5000 and add details of a new user in the UI. 
     Now visit http://<PUBLIC_IP_OF_SOUTHEAST_ASIA_REGION>:5000, and check all the registered users.
     You should see the user added in Central India region. We can test this vice-versa as well by adding new user from Southeast asia region.
     
-9. **Tear down**
+9. **Tear down** <br>
     Once the testing is done, tear down the ACRE clusters and the VMs in both the regions.
 
 
