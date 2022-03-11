@@ -24,7 +24,7 @@ The reference architecture looks something like this:
 Create ACRE cluster with SKU E10, capacity can be anything. For this demo I have chosen 2. <br>
 Deploy one cluster in Central India region and other in Southeast Asia region. You can achieve this either from Azure Portal, Azure Cli or Terraform scripts.<br> Terraform link is provided here https://github.com/bestarch/re-aa <br>
 ![image](https://user-images.githubusercontent.com/26322220/143982955-381f77b0-33db-4eb1-93df-8819192d7ae2.png)
-Once complete, it looks something like this:
+Once complete, it looks something like this: <br>
 ![image](https://user-images.githubusercontent.com/26322220/157701062-7143bcba-5013-42fb-8fe3-87c06eeba2e0.png)
 
 
@@ -55,14 +55,16 @@ Following are the steps needed for this:
         sudo apt install python3-pip
         sudo apt-get -y install nginx
         sudo apt-get -y install git
+        
+    c.  Provision the sample user-profile application
+    
         git clone https://github.com/bestarch/user-profile.git
         cd user-profile
-
         sudo apt install python3-flask
         sudo apt install python3-pip
         pip3 install -r requirements.txt
         
-    c. Start the server
+    d. Start the server
     
         cd user-profile
         export FLASK_APP=server.py
@@ -71,10 +73,10 @@ Following are the steps needed for this:
         export PASSWORD=<PASSWORD> # From step 3 above
         flask run -h 0.0.0.0
 
-    d.  Repeat the above steps for another region "Southeast Asia"
+    e.  Repeat the above steps for another region "**Southeast Asia**"
     
     
-    For further reading on how to deploy python apps on Azure, please refer this link: https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2102
+For further reading on how to deploy python apps on Azure, please refer this link: https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2102
     
 6. Now we have deployed the active-active cluster along with the 2 VMs in each region. The deployment looks something like this:
 ![image](https://user-images.githubusercontent.com/26322220/157700761-c992d6cf-b428-4ee7-8b57-df8113096c80.png)
