@@ -23,7 +23,9 @@ The reference architecture looks something like this:
 1. **Deployment of Redis Enterprise clusters with active geo-replication**: <br>
 Create ACRE cluster with SKU E10, capacity can be anything. For this demo I have chosen 2. <br>
 Deploy one cluster in Central India region and other in Southeast Asia region. You can achieve this either from Azure Portal, Azure Cli or Terraform scripts.<br> Terraform link is provided here https://github.com/bestarch/re-aa <br>
+
 ![image](https://user-images.githubusercontent.com/26322220/143982955-381f77b0-33db-4eb1-93df-8819192d7ae2.png)
+
 Once complete, it looks something like this: <br>
 ![image](https://user-images.githubusercontent.com/26322220/157701062-7143bcba-5013-42fb-8fe3-87c06eeba2e0.png)
 
