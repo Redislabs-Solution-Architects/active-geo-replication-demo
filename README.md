@@ -39,6 +39,7 @@ For deploying our app, we will first spin-up two Azure VMs in each of the region
 Following are the steps needed for this:
 
     a. Create a VM with following details:
+    
         OS: Ubuntu 18.04 
         Region: Central India
         Size: Standard D2s v3 (2 vcpus, 8 GiB memory)
@@ -46,6 +47,7 @@ Following are the steps needed for this:
         Enable public IP access
         Make everything else as default
         Note down the Public IP 
+        
     b. Once the VM is up SSH into the terminal and execute these scripts:
 
         sudo apt-get update
@@ -66,6 +68,7 @@ Following are the steps needed for this:
         flask run -h 0.0.0.0
 
     c.  Repeat the above steps for another region "Southeast Asia"
+    
     
     For further reading on how to deploy python apps on Azure, please refer this link: https://docs.microsoft.com/en-us/azure-stack/user/azure-stack-dev-start-howto-vm-python?view=azs-2102
     
