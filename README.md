@@ -90,9 +90,12 @@ Let's test this.
 
 ![image](https://user-images.githubusercontent.com/26322220/144081701-9dc03936-1343-4715-acb5-e6746b07dc0a.png)
 
-8. **Testing**: Open http://<PUBLIC_IP_OF_CENTRAL_INDIA_REGION>:5000, enter the details of the new user. 
-Now visit  http://<PUBLIC_IP_OF_SOUTHEAST_ASIA_REGION>:5000, and check all the registered users.
-You should see the user added in Central India region. We can test this vice-versa as well by adding new user from Southeast asia region.
-
+8. **Testing**
+    Open http://<PUBLIC_IP_OF_CENTRAL_INDIA_REGION>:5000 and add details of a new user in the UI. 
+    Now visit http://<PUBLIC_IP_OF_SOUTHEAST_ASIA_REGION>:5000, and check all the registered users.
+    You should see the user added in Central India region. We can test this vice-versa as well by adding new user from Southeast asia region.
+    
+9. **Tear down**
+    Once the testing is done, tear down the ACRE clusters and the VMs in both the regions.
 
 
