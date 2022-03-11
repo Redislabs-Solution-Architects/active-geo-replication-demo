@@ -20,7 +20,7 @@ The reference architecture looks something like this:
 
 
 **Procedure**
-1. **Deployment of Redis Enterprise clusters with active geo-replication**: 
+1. **Deployment of Redis Enterprise clusters with active geo-replication**: <br>
 Create ACRE cluster with SKU E10, capacity can be anything. For this demo I have chosen 2. <br>
 Deploy one cluster in Central India region and other in Southeast Asia region. You can achieve this either from Azure Portal, Azure Cli or Terraform scripts.<br> Terraform link is provided here https://github.com/bestarch/re-aa <br>
 ![image](https://user-images.githubusercontent.com/26322220/143982955-381f77b0-33db-4eb1-93df-8819192d7ae2.png)
@@ -34,7 +34,9 @@ Once complete, it looks something like this:
 
 4. Next we will deploy the Python and Flask app to each of these regions. The idea is, each app should be connected to the cluster located in their respective region. Refer the architecture diagram above.
 
-5. **Application Deployment**: For deploying our app, we will first spin-up two Azure VMs in each of the regions and install the needed softwares to run our apps. Following are the steps needed for this:
+5. **Application Deployment**: <br>
+For deploying our app, we will first spin-up two Azure VMs in each of the regions and install the needed softwares to run our apps.<br>
+Following are the steps needed for this:
 
     a. Create a VM with following details:
         OS: Ubuntu 18.04 
