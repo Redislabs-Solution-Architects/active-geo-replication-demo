@@ -5,8 +5,8 @@ Active Geo-replication using User Profile application deployed in two different 
 **Introduction**
 
 For the active geo replication demo, we will:
-* Deploy 2 ACRE clusters one each in East US and Central US. For this demo, I have used these Terraform scripts: https://github.com/bestarch/re-aa
-* Deploy a sample user profile application built on Python, Flask, Bootstrap on VMs in each of these regions. The application is present here: https://github.com/bestarch/user-profile
+* Deploy 2 ACRE clusters one each in East US and Central US. For this demo, I have used these Terraform scripts: https://github.com/Redislabs-Solution-Architects/re-aa
+* Deploy a sample user profile application built on Python, Flask, Bootstrap on VMs in each of these regions. The application is present in this repo.
 
 **Reference architecture**
 
@@ -16,7 +16,7 @@ The reference architecture looks something like this:
 
 
 **Procedure**
-1. **Deployment of Redis Enterprise clusters with active geo-replication**: Create ACRE cluster with SKU E100, capacity can be anything. For this demo I have chosen 10. Deploy one cluster in East US region and other deploy it in Central US region. You may either do it from Azure Portal or do it using Azure Cli or Terraform. Terraform link is provided here https://github.com/bestarch/re-aa
+1. **Deployment of Redis Enterprise clusters with active geo-replication**: Create ACRE cluster with SKU E100, capacity can be anything. For this demo I have chosen 10. Deploy one cluster in East US region and other deploy it in Central US region. You may either do it from Azure Portal or do it using Azure Cli or Terraform. Terraform link is provided here https://github.com/Redislabs-Solution-Architects/re-aa
 ![image](https://user-images.githubusercontent.com/26322220/143982955-381f77b0-33db-4eb1-93df-8819192d7ae2.png)
 Once complete, it looks something like this:
 ![image](https://user-images.githubusercontent.com/26322220/144082884-6ebeb6fa-8d9b-4470-ae68-56a41a09579e.png)
@@ -45,7 +45,7 @@ Once complete, it looks something like this:
         sudo apt install python3-pip
         sudo apt-get -y install nginx
         sudo apt-get -y install git
-        git clone https://github.com/bestarch/user-profile.git
+        git clone https://github.com/Redislabs-Solution-Architects/active-geo-replication-demo.git
         cd user-profile
 
         sudo apt install python3-flask
@@ -70,9 +70,11 @@ Let's test this.
 
 ![image](https://user-images.githubusercontent.com/26322220/144081701-9dc03936-1343-4715-acb5-e6746b07dc0a.png)
 
-8. **Testing**: Open http://<PUBLIC_IP_OF_EAST_US_REGION>:5000, enter the details of the new user. 
+8. **Testing**: 
+Open http://<PUBLIC_IP_OF_EAST_US_REGION>:5000, enter the details of the new user. 
 Now visit  http://<PUBLIC_IP_OF_CENTRAL_US_REGION>:5000, and check all the registered users.
-You should see the user added in East US region. We can test this vice-versa as well by adding new user from central region.
+You should see the user added in East US region. 
+We can test this vice-versa as well by adding new user from central region.
 
 
 
